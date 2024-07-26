@@ -1,0 +1,139 @@
+body{
+    background-color: var(--rose-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    height: 100vh;
+    margin-top: 150px;
+    
+}
+
+#desserts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#desserts h1{
+    font-size: 32px;
+    color: var(--rose-900);
+    
+}
+
+#desserts_content{
+    display: grid;
+    grid-template-columns: repeat(3,245px);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.dessert-item{
+    width: 245px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 30px;
+    padding: 5px 0 5px;
+
+}
+
+.dessert-img{
+    width: 100%;
+    
+}
+
+.dessert-img img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.dessert-btn{
+    position: absolute;
+    background: none;
+    background-color: var(--rose-50);
+    border: solid 1px var(--red);
+    padding: 10px 24px 10px 24px;
+    border-radius: 100px;
+    top: 217px;
+    left: 51px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    
+
+}
+
+.dessert-btn span{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--rose-700);
+}
+
+.dessert-btn i{
+    color: var(--rose-700);
+}
+
+.dessert-title{
+    font-size: 14px;
+    color: var(--rose-500);
+
+}
+
+.dessert-name{
+    font-weight: 600;
+    color: var(--rose-900);
+
+}
+
+.dessert-price{
+    font-weight: 600;
+    color: var(--red);
+}
+
+#cart_content{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 350px;
+    
+
+}
+
+#cart_content h2,span{
+    font-size: 18px;
+    color: var(--red);
+
+}
+
+#empty_warn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#empty_warn img{
+    width: 40%;
+}
+
+#empty_warn p{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--rose-500);
+    margin-bottom: 20px;
+}
