@@ -1,5 +1,9 @@
 const grid = document.querySelector('#desserts_content')
-
+const confirmBtn = document.querySelector('#cart_confirm_btn')
+const modal = document.querySelector('#modal')
+const newOrder = document.querySelector('#new_order_btn')
+const cartResume = document.querySelector('.cart-resume')
+const cartContent = document.querySelector('#empty_warn')
 
 cart = []
 
@@ -83,8 +87,8 @@ function updateCart(){
 
   updateCartCount()
 
-  const cartContent = document.querySelector('#empty_warn')
-  const cartResume = document.querySelector('.cart-resume')
+  
+  
   const total = document.querySelector('.cart-total p')
   let auxTotal = 0
 
@@ -143,6 +147,83 @@ function updateCartCount(){
 
 }
 
+
+confirmBtn.addEventListener('click', function(){
+
+  const modal = document.querySelector('#modal')
+
+  modal.classList.remove('inactive')
+
+  updateModal()
+})
+
+
+function updateModal(){
+
+  const modalItems = document.querySelector('.modal-cart-items')
+  const modalTotal = document.querySelector('.modal-resume p')
+  let total = 0
+  modalItems.innerHTML = ''
+
+  cart.forEach(item=>{
+    total += item.price*item.quantity
+    modalItems.innerHTML += `
+
+          <div class="modal-cart-item">
+
+            <div class="modal-cart-item-info">
+              <img src="${item.image}" alt="">
+              <div class="modal-cart-item-txt">
+                <p class="cart-item-title">${item.name}</p>
+                <div class="modal-cart-item-values">
+                  <span>${item.quantity}</span>
+                  <span>@R$${item.price}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-cart-item-price">
+              <span>R$${item.price*item.quantity}</span>
+            </div>
+
+          </div>`
+
+    
+  })
+
+  
+  modalTotal.innerHTML = `${total.toLocaleString("pt-BR",{
+    style: "currency",
+    currency: "BRL"
+  })}`
+}
+
+modal.addEventListener('click', function(event){
+
+  if(event.target == modal){
+    modal.classList.add('inactive')
+  }
+
+  console.log
+})
+
+
+newOrder.addEventListener('click', function(event){
+
+  if(event.target == newOrder){
+    modal.classList.add('inactive')
+
+    cart = []
+    updateCart()
+
+    cartResume.classList.add('inactive')
+
+    cartContent.innerHTML = `
+     <img src="assets/images/illustration-empty-cart.svg" alt="">
+      <p class="empty-message">Your added items will appear here</p>
+    `
+  }
+})
 
 
 

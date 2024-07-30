@@ -1,0 +1,132 @@
+#modal{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#modal_content{
+
+    background-color: white ;
+    width: 550px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 12px;
+
+}
+
+#modal_content img{
+    height: 40px;
+    align-self: flex-start;
+}
+
+.confirm-txt{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.confirm-txt p{
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.confirm-txt span{
+    font-size: 14px;
+    color: var(--rose-500);
+    font-weight: 500;
+}
+
+
+.modal-items{
+    background-color: var(--rose-100);
+    width: 100%;
+    border-radius: 8px;
+    padding: 6px 20px 6px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-cart-item{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0 14px 0;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.modal-cart-item-info{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.modal-cart-item-info img{
+    border-radius: 3px;
+}
+
+.modal-cart-item-txt{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+}
+
+.modal-cart-item-values{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.modal-cart-item-txt span:first-child{
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.modal-cart-item-txt span:last-child{
+
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--rose-500);
+}
+
+.modal-cart-item-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-cart-item-price span{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--rose-900);
+}
+
+.modal-resume{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.modal-resume p{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.modal-resume span{
+    font-size: 14px;
+    color: var(--rose-500);
+    font-weight: 500;
+}

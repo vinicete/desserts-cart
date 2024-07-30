@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style/global.css">
   <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/cart.css">
+  <link rel="stylesheet" href="style/modal.css">
+
   <script src="scripts/script.js" defer></script>
   
   <title>Frontend Mentor | Product list with cart</title>
@@ -36,11 +39,6 @@
           <img src="assets/images/illustration-empty-cart.svg" alt="">
           <p class="empty-message">Your added items will appear here</p>
 
-          
-
-         
-
-
         </div>
 
         <div class="cart-resume inactive">
@@ -54,14 +52,63 @@
             <p>This is a <strong>carbon-neutral</strong> delivery</p>
           </div>
           
-          <button class="confirm-btn">
+          <button class="confirm-btn" id="cart_confirm_btn">
             Confirm Order
           </button>
         </div>
       </div>
 
     </section>
+
+
+    
   </main>
+
+  <div id="modal" class="inactive">
+    <div id="modal_content">
+      <img src="assets/images/icon-order-confirmed.svg" alt="">
+
+      <div class="confirm-txt">
+        <p>Order Confirmed</p>
+        <span>We hope you enjoy your food!</span>
+      </div>
+
+      <div class="modal-items">
+        <div class="modal-cart-items">
+
+          <div class="modal-cart-item">
+
+            <div class="modal-cart-item-info">
+              <img src="assets/images/image-baklava-thumbnail.jpg" alt="">
+              <div class="modal-cart-item-txt">
+                <p class="cart-item-title">Classic Tiramisu</p>
+                <div class="modal-cart-item-values">
+                  <span>1x</span>
+                  <span>@$5.50</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-cart-item-price">
+              <span>$5.50</span>
+            </div>
+
+          </div>
+
+          
+          
+
+          
+        </div>
+        <div class="modal-resume">
+          <span>Order Total:</span>
+          <p>$46.50</p>
+        </div>
+      </div>
+
+      <button class="confirm-btn" id="new_order_btn">Start New Order</button>
+    </div>
+  </div>
 
 </body>
 </html>

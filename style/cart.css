@@ -1,0 +1,156 @@
+#cart_content{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+    
+
+}
+
+#cart_content h2,span{
+    font-size: 18px;
+    color: var(--red);
+
+}
+
+#empty_warn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#empty_warn img{
+    width: 40%;
+}
+
+.empty-message{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--rose-500);
+    margin-bottom: 20px;
+}
+
+.cart-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+    padding-bottom: 15px;
+}
+
+.remove-cart-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.remove-cart-btn img{
+    width: 32px;
+    height: 32px;
+}
+
+.cart-item-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.cart-item-title{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cart-item-info-values{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-item-info-values span{
+    font-size: 14px;
+    color: var(--rose-500);
+}
+
+.cart-item-info-values span:first-child{
+    font-weight: 700;
+    color: var(--red);
+}
+
+.cart-item-info-values span:last-child{
+    font-weight: 600;
+    color: var(--rose-500);
+}
+
+.cart-resume{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cart-total{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-total span{
+    font-size: 14px;
+    color: var(--rose-500);
+    font-weight: 500;
+}
+.cart-total p{
+    font-size: 26px;
+    font-weight: 700;
+}
+.carbon-neutral{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: var(--rose-50);
+    width: 100%;
+    padding: 14px 0 14px 0;
+    border-radius: 5px;
+}
+
+.carbon-neutral p{
+    font-size: 14px;
+    color: var(--rose-900);
+    font-weight: 400;
+}
+.carbon-neutral strong{
+    font-size: 14px;
+}
+.carbon-neutral img{
+    height: 18px;
+}
+
+.confirm-btn{
+    border: none;
+    background: var(--red);
+    width: 100%;
+    border-radius: 100px;
+    padding: 14px 0 14px 0;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.inactive{
+    display: none !important;
+}
