@@ -30,11 +30,33 @@
 
       <div id="cart_content">
 
-        <h2>Your Cart <span>(0)</span></h2>
+        <h2>Your Cart <span class="cart-cont">(0)</span></h2>
 
-        <div id="empty_warn">
+        <div id="empty_warn" >
           <img src="assets/images/illustration-empty-cart.svg" alt="">
-          <p>Your added items will appear here</p>
+          <p class="empty-message">Your added items will appear here</p>
+
+          
+
+         
+
+
+        </div>
+
+        <div class="cart-resume inactive">
+          <div class="cart-total">
+            <span>Order Total</span>
+            <p>$46.50</p>
+          </div>
+
+          <div class="carbon-neutral">
+            <img src="assets/images/icon-carbon-neutral.svg" alt="">
+            <p>This is a <strong>carbon-neutral</strong> delivery</p>
+          </div>
+          
+          <button class="confirm-btn">
+            Confirm Order
+          </button>
         </div>
       </div>
 
