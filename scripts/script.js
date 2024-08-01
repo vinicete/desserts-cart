@@ -7,6 +7,31 @@ const cartContent = document.querySelector('#empty_warn')
 
 cart = []
 
+function updateImages(){
+
+  const width = window.innerWidth;
+  const img = document.querySelectorAll('.dessert-img img')
+
+  img.forEach(img=>{
+    console.log(width)
+    const src = img.src
+    if(width<=910){
+      img.src = src.replace('desktop','mobile')
+      
+    }
+      
+    
+    else 
+      img.src = src.replace('mobile','desktop')
+  })
+}
+
+window.addEventListener('resize',function(){
+  
+  updateImages()
+  console.log('asad')
+})
+
 fetch("../data.json").then((response)=>{
     response.json().then((dados)=>{
         //console.log(dados)
@@ -31,6 +56,7 @@ fetch("../data.json").then((response)=>{
 
         </div>`
         });
+
     })
 
 })
@@ -49,6 +75,11 @@ grid.addEventListener('click', function(event){
 
 
     addToCart(image,title,name,price)
+
+    const img = dessertItem.querySelector('.dessert-img img')
+
+    img.style.border = 'solid 2px var(--red)'
+    
 
     
 
@@ -211,6 +242,13 @@ modal.addEventListener('click', function(event){
 newOrder.addEventListener('click', function(event){
 
   if(event.target == newOrder){
+
+    const img = document.querySelectorAll('.dessert-img img')
+    img.forEach(item=>{
+      item.style.border = 'none'
+
+    })
+    
     modal.classList.add('inactive')
 
     cart = []
@@ -224,6 +262,7 @@ newOrder.addEventListener('click', function(event){
     `
   }
 })
+
 
 
 

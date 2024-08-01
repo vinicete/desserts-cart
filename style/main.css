@@ -1,6 +1,7 @@
 body{
     background-color: var(--rose-100);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -33,6 +34,7 @@ main{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding-bottom: 100px;
 
 }
 
@@ -106,3 +108,41 @@ main{
 }
 
 
+@media screen and (max-width: 1180px){
+
+    #desserts_content{
+        grid-template-columns: repeat(2,245px);
+    }
+
+    
+}
+
+@media screen and (max-width: 910px){
+
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        height: 100vh;
+        margin-top: 150px;
+        
+    }
+    #desserts_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0px;
+    }
+
+    .dessert-item{
+        width: 350px;
+    }
+
+    .dessert-btn{
+        top: 210px;
+        left: 93px;
+    }
+
+
+}

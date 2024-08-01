@@ -154,3 +154,10 @@
 .inactive{
     display: none !important;
 }
+
+@media screen and (max-width: 910px){
+    
+    #cart{
+        padding-bottom: 80px;
+    }
+}
